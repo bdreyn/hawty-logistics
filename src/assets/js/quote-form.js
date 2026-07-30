@@ -1,5 +1,5 @@
 // Replace with the deployed Google Apps Script Web App URL (see README for setup steps).
-const QUOTE_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzixF47MugQBVCE7pBLuWqA42nWC153UYhHjhNggRlS2gfQhK_R_7BaOGpQE8gWQ1iA/exec";
+const QUOTE_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxf9NDk6GDjE8A-6Y-EAtNbxxwajeksGTEgvXWidTf4zhOwfZ0eBSIBrVWPj5EwOO8g/exec";
 
 (function () {
   const form = document.getElementById("quote-form");
