@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ site.companyName }} — {{ site.tagline }}</title>
   <meta name="description" content="{{ site.tagline }}">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 </head>
 <body class="flex min-h-screen flex-col bg-white text-gray-900">
   <header class="border-b border-gray-200 bg-white">
     <div class="container-page flex items-center justify-between py-4">
-      <a href="/" class="text-xl font-bold text-brand">{{ site.companyName }}</a>
+      <a href="{{ '/' | url }}" class="text-xl font-bold text-brand">{{ site.companyName }}</a>
       <nav class="hidden gap-6 text-sm font-medium sm:flex">
         {% for section in homepage.sections %}
           {% if section.visible %}
