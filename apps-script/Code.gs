@@ -1,7 +1,7 @@
 // Paste this into Extensions > Apps Script on the Google Sheet that will
 // collect quote requests and general inquiries, then deploy as a Web App
 // (see README).
-const NOTIFY_EMAIL = "info@hawtylogistics.com";
+const NOTIFY_EMAIL = "brandon@hawtylogistics.com";
 
 // Prevents Sheets from interpreting a submitted value as a formula
 // (e.g. "=HYPERLINK(...)") by prefixing it with an apostrophe when it
