@@ -1,11 +1,25 @@
 // Replace with the deployed Google Apps Script Web App URL (see README for setup steps).
-const QUOTE_FORM_ENDPOINT = "https://script.google.com/macros/s/REPLACE_WITH_DEPLOYMENT_ID/exec";
+const QUOTE_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzixF47MugQBVCE7pBLuWqA42nWC153UYhHjhNggRlS2gfQhK_R_7BaOGpQE8gWQ1iA/exec";
 
 (function () {
   const form = document.getElementById("quote-form");
   if (!form) return;
 
   const status = document.getElementById("quote-form-status");
+  const quoteFields = document.getElementById("quote-fields");
+  const messageLabel = document.getElementById("message-label");
+
+  function updateFieldsForRequestType() {
+    const requestType = form.querySelector("input[name=requestType]:checked").value;
+    const isQuote = requestType === "quote";
+    quoteFields.classList.toggle("hidden", !isQuote);
+    messageLabel.textContent = isQuote ? "Additional Details" : "Message";
+  }
+
+  form.querySelectorAll("input[name=requestType]").forEach((radio) => {
+    radio.addEventListener("change", updateFieldsForRequestType);
+  });
+  updateFieldsForRequestType();
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
