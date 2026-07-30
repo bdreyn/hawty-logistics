@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+{% for section in homepage.sections %}
+  {% if section.visible %}
+    {% include "sections/" + section.type + ".njk" %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,33 @@
+{
+  "sections": [
+    {
+      "type": "hero",
+      "visible": true,
+      "heading": "Freight Moved Right",
+      "body": "Hawty Logistics delivers dependable freight, warehousing, and last-mile solutions across the region.",
+      "ctaText": "Request a Quote",
+      "ctaLink": "#contact"
+    },
+    {
+      "type": "about",
+      "visible": true,
+      "heading": "About Hawty Logistics",
+      "body": "For over a decade, Hawty Logistics has helped businesses of all sizes move freight safely and on schedule. Our team combines modern tracking technology with a hands-on approach to customer service, so you always know where your shipment stands."
+    },
+    {
+      "type": "services",
+      "visible": true,
+      "heading": "Our Services"
+    },
+    {
+      "type": "testimonials",
+      "visible": true,
+      "heading": "What Our Clients Say"
+    },
+    {
+      "type": "contact",
+      "visible": true,
+      "heading": "Get a Quote"
+    }
+  ]
+}
