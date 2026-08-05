@@ -3,35 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.companyName }} — {{ site.tagline }}</title>
-  <meta name="description" content="{{ site.tagline }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+  <title>{{ site.companyName }}</title>
+  <meta name="description" content="{{ site.hero.subtext }}">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body class="flex min-h-screen flex-col bg-white text-gray-900">
-  <header class="border-b border-gray-200 bg-white">
-    <div class="container-page flex items-center justify-between py-4">
-      <a href="{{ '/' | url }}" class="text-xl font-bold text-brand">{{ site.companyName }}</a>
-      <nav class="hidden gap-6 text-sm font-medium sm:flex">
-        {% for section in homepage.sections %}
-          {% if section.visible %}
-          <a href="#{{ section.type }}" class="hover:text-brand">{{ section.heading }}</a>
-          {% endif %}
-        {% endfor %}
-      </nav>
-    </div>
-  </header>
-
-  <main class="flex-1">
+<body id="top">
+  {% include "nav.njk" %}
+  <main>
     {{ content | safe }}
   </main>
-
-  <footer class="border-t border-gray-200 bg-gray-50">
-    <div class="container-page py-8 text-sm text-gray-600">
-      <p class="font-semibold text-gray-900">{{ site.companyName }}</p>
-      <p>{{ site.address }}</p>
-      <p>{{ site.phone }} &middot; {{ site.email }}</p>
-      <p class="mt-4">&copy; {{ currentYear }} {{ site.companyName }}. All rights reserved.</p>
-    </div>
+  <footer class="site-footer">
+    <p>&copy; {{ currentYear }} {{ site.companyName }}. All rights reserved.</p>
   </footer>
+  <script src="/assets/js/contact-form.js" defer></script>
 </body>
 </html>

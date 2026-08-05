@@ -1,13 +1,37 @@
 {
-  "companyName": "Hawty Logistics",
-  "tagline": "Reliable freight, delivered on time, every time.",
-  "phone": "903-484-4847",
-  "email": "info@hawtylogistics.com",
-  "address": "491 Wiley Dr, Bullard, TX 75757",
-  "social": {
-    "facebook": "",
-    "linkedin": "",
-    "twitter": ""
+  "companyName": "Hawty Logistics, LLC",
+  "logo": "/assets/img/logo.svg",
+  "hero": {
+    "headline": "Reliable Logistics, Delivered.",
+    "subtext": "Hawty Logistics keeps your freight moving — on time, every time. Full site coming soon.",
+    "ctaLabel": "Get In Touch"
   },
-  "logo": "/assets/images/logo.svg"
+  "about": {
+    "heading": "About Us",
+    "body": "Hawty Logistics, LLC is a logistics company dedicated to dependable freight, trucking, and warehousing solutions. We're building out our full site — check back soon for more."
+  },
+  "services": [
+    {
+      "title": "Freight Shipping",
+      "description": "Dependable freight solutions tailored to your business needs."
+    },
+    {
+      "title": "Trucking",
+      "description": "Point-to-point trucking with real-time tracking and updates."
+    },
+    {
+      "title": "Warehousing",
+      "description": "Secure, flexible storage solutions for your inventory."
+    },
+    {
+      "title": "Logistics Consulting",
+      "description": "Expert guidance to streamline your supply chain."
+    }
+  ],
+  "contact": {
+    "heading": "Contact Us",
+    "body": "Have a question or want a quote? Send us a message and we'll get back to you shortly.",
+    "email": "info@hawtylogistics.com",
+    "phone": ""
+  }
 }

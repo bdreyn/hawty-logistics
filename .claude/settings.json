@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(rm -rf _site)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(npm start *)",
+      "Bash(curl -s http://localhost:8080/)",
+      "Bash(ls -la \"c:\\\\Users\\\\bdrey\\\\OneDrive\\\\Documents\\\\Websites\\\\hawty-logistics\")",
+      "Read(//c/Users/bdrey/OneDrive/Documents/Websites/hawty-logistics/**)",
+      "Bash(node -c src/assets/js/quote-form.js)",
+      "Bash(git push *)",
+      "Bash(gh run *)",
+      "Bash(git remote *)",
+      "Bash(curl -s \"https://api.github.com/repos/bdreyn/hawty-logistics/actions/runs?per_page=5\")",
+      "Bash(curl -s \"https://api.github.com/repos/bdreyn/hawty-logistics/actions/runs/30578410206/jobs\")",
+      "Bash(node -e ' *)",
+      "Bash(curl -sL \"https://api.github.com/repos/bdreyn/hawty-logistics/actions/jobs/90992369592/logs\")",
+      "Bash(git fetch *)"
+    ]
+  }
+}

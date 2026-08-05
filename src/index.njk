@@ -1,8 +1,60 @@
 ---
 layout: base.njk
+title: Home
 ---
-{% for section in homepage.sections %}
-  {% if section.visible %}
-    {% include "sections/" + section.type + ".njk" %}
-  {% endif %}
-{% endfor %}
+<section class="hero">
+  <div class="hero-inner">
+    <h1>{{ site.hero.headline }}</h1>
+    <p>{{ site.hero.subtext }}</p>
+    <a href="#contact" class="btn btn-primary">{{ site.hero.ctaLabel }}</a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="section-inner">
+    <h2>{{ site.about.heading }}</h2>
+    <p>{{ site.about.body }}</p>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="section-inner">
+    <h2>Services</h2>
+    <div class="services-grid">
+      {% for service in site.services %}
+      <div class="service-card">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-inner">
+    <h2>{{ site.contact.heading }}</h2>
+    <p>{{ site.contact.body }}</p>
+
+    <form id="contact-form" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn btn-secondary">Send Message</button>
+      <p id="contact-form-status" class="contact-form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    {% if site.contact.email %}
+    <p class="contact-direct">Or reach us directly at <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+    {% endif %}
+  </div>
+</section>
