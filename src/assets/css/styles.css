@@ -227,3 +227,16 @@ a {
   padding: 1.5rem;
   font-size: 0.9rem;
 }
+
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--color-white);
+}
+
+/* Standalone pages (privacy policy, terms, etc.) */
+.page {
+  background: var(--color-bg);
+}

@@ -1,13 +1,15 @@
 <header class="navbar">
   <div class="navbar-inner">
-    <a href="#top" class="navbar-brand">
+    <a href="/" class="navbar-brand">
       <img src="{{ site.logo }}" alt="{{ site.companyName }} logo" class="navbar-logo" onerror="this.style.display='none'">
       <span class="navbar-name">{{ site.companyName }}</span>
     </a>
     <nav class="navbar-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      {% for section in homepage.sections %}
+        {% if section.visible and section.type != "hero" %}
+        <a href="/#{{ section.type }}">{{ section.heading }}</a>
+        {% endif %}
+      {% endfor %}
     </nav>
   </div>
 </header>
