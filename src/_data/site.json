@@ -1,5 +1,6 @@
 {
   "companyName": "Hawty Logistics, LLC",
   "tagline": "Veteran-owned. Mission-driven.",
-  "logo": "/assets/img/hawty-logistics-logo-white.png"
+  "logo": "/assets/img/hawty-logistics-logo-white.png",
+  "favicon": "/assets/img/favicon.ico"
 }

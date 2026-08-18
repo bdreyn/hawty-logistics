@@ -74,6 +74,7 @@ collections:
           - { label: Company Name, name: companyName, widget: string }
           - { label: Tagline, name: tagline, widget: string }
           - { label: Logo, name: logo, widget: image }
+          - { label: Favicon, name: favicon, widget: file }
 
   - name: pages
     label: Pages
