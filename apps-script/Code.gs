@@ -1,6 +1,13 @@
 /**
  * Hawty Logistics — Contact Form → Google Sheets
  *
+ * NOT CURRENTLY WIRED UP. The contact form (src/assets/js/contact-form.js)
+ * currently posts to Formspree instead — see README.md. This file is kept
+ * as a ready-to-deploy fallback in case Formspree's free tier doesn't work
+ * out; if reverting, point CONTACT_FORM_ENDPOINT back at an Apps Script Web
+ * App URL deployed from this file and change contact-form.js's fetch call
+ * to mode: "no-cors" (Apps Script Web Apps don't send CORS headers).
+ *
  * Setup:
  * 1. Create a Google Sheet with a header row: Timestamp | Name | Email | Phone | Message
  * 2. Extensions -> Apps Script, paste this file's contents in as Code.gs.
@@ -25,7 +32,9 @@ function doPost(e) {
 
   // Honeypot: real users never fill this hidden field, so a non-empty
   // value means the submission came from a bot. Silently drop it.
-  if (params.website) {
+  // Matches the form's current field name (_gotcha, Formspree's own
+  // honeypot convention — reused here so this stays a drop-in fallback).
+  if (params._gotcha) {
     return ContentService.createTextOutput(
       JSON.stringify({ result: "success" })
     ).setMimeType(ContentService.MimeType.JSON);
