@@ -1,16 +1,18 @@
 ---
 layout: base.njk
 ---
-{% for section in homepage.sections %}
-  {% if section.visible %}
-    {% if section.type == "hero" %}
-      {% include "sections/hero.njk" %}
-    {% elif section.type == "about" %}
-      {% include "sections/about.njk" %}
-    {% elif section.type == "services" %}
-      {% include "sections/services.njk" %}
-    {% elif section.type == "contact" %}
-      {% include "sections/contact.njk" %}
+<section class="coming-soon">
+  <div class="coming-soon-inner">
+    <img src="{{ site.logo }}" alt="{{ site.companyName }} logo" class="coming-soon-logo" onerror="this.style.display='none'">
+    <h1>{{ site.companyName }}</h1>
+    <p class="tagline">{{ site.tagline }}</p>
+    <p class="notice">Our full site is coming soon.</p>
+    {% if site.email or site.phone %}
+    <p class="contact-line">
+      {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+      {% if site.email and site.phone %} &middot; {% endif %}
+      {% if site.phone %}{{ site.phone }}{% endif %}
+    </p>
     {% endif %}
-  {% endif %}
-{% endfor %}
+  </div>
+</section>

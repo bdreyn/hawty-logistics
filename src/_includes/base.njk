@@ -3,23 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }}{% if title %} — {% endif %}{{ site.companyName }}</title>
+  <title>{{ site.companyName }} — Coming Soon</title>
   <meta name="description" content="{{ site.tagline }}">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body id="top">
-  {% include "nav.njk" %}
+<body>
   <main>
     {{ content | safe }}
   </main>
   <footer class="site-footer">
     <p>&copy; {{ currentYear }} {{ site.companyName }}. All rights reserved.</p>
-    {% if collections.pages.length %}
-    <p class="footer-links">
-      {% for page in collections.pages %}<a href="{{ page.url }}">{{ page.data.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
-    </p>
-    {% endif %}
   </footer>
-  <script src="/assets/js/contact-form.js" defer></script>
 </body>
 </html>

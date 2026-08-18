@@ -1,14 +1,10 @@
 :root {
   --color-primary: #1b7895;
-  --color-primary-dark: #145d73;
   --color-secondary: #004369;
-  --color-secondary-dark: #002d47;
   --color-bg: #ffffff;
-  --color-bg-alt: #f4f7f9;
   --color-text: #1a1a1a;
   --color-text-muted: #4a4a4a;
   --color-white: #ffffff;
-  --max-width: 1100px;
 }
 
 * {
@@ -23,7 +19,7 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1 {
   line-height: 1.2;
   margin-top: 0;
 }
@@ -32,191 +28,45 @@ a {
   color: var(--color-primary);
 }
 
-/* Nav */
-.navbar {
-  background: var(--color-primary);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.navbar-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+.coming-soon {
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: var(--color-white);
-}
-
-.navbar-logo {
-  height: 36px;
-  width: auto;
-}
-
-.navbar-name {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--color-white);
-}
-
-.navbar-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.navbar-links a {
-  color: var(--color-white);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.navbar-links a:hover {
-  text-decoration: underline;
-}
-
-/* Hero */
-.hero {
+  justify-content: center;
   background: var(--color-secondary);
   color: var(--color-white);
   text-align: center;
-  padding: 5rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
-.hero-inner {
-  max-width: 700px;
-  margin: 0 auto;
+.coming-soon-inner {
+  max-width: 500px;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.coming-soon-logo {
+  height: 64px;
+  width: auto;
+  margin-bottom: 1.5rem;
 }
 
-.hero p {
-  font-size: 1.15rem;
+.coming-soon h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.coming-soon .tagline {
+  font-size: 1.1rem;
   color: #d6e6ee;
   margin-bottom: 2rem;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
-  border-radius: 4px;
+.coming-soon .notice {
   font-weight: 600;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.btn-primary {
-  background: var(--color-primary);
+.coming-soon .contact-line a {
   color: var(--color-white);
-}
-
-.btn-primary:hover {
-  background: var(--color-primary-dark);
-}
-
-.btn-secondary {
-  background: var(--color-secondary);
-  color: var(--color-white);
-}
-
-.btn-secondary:hover {
-  background: var(--color-secondary-dark);
-}
-
-/* Sections */
-.section-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-
-.about {
-  background: var(--color-bg);
-}
-
-.services {
-  background: var(--color-bg-alt);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.service-card {
-  background: var(--color-white);
-  border: 1px solid #e2e8ec;
-  border-radius: 8px;
-  padding: 1.5rem;
-}
-
-.service-card h3 {
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
-}
-
-.contact {
-  background: var(--color-bg);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin-top: 2rem;
-  gap: 0.4rem;
-}
-
-.contact-form label {
-  font-weight: 600;
-  margin-top: 0.6rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.6rem;
-  border: 1px solid #ccd6db;
-  border-radius: 4px;
-  font: inherit;
-}
-
-.contact-form button {
-  margin-top: 1.25rem;
-  align-self: flex-start;
-}
-
-.contact-form-status {
-  min-height: 1.2em;
-  font-weight: 600;
-}
-
-.contact-form-status.success {
-  color: #1e7d34;
-}
-
-.contact-form-status.error {
-  color: #b3261e;
-}
-
-.contact-direct {
-  margin-top: 1.5rem;
-  color: var(--color-text-muted);
 }
 
 /* Footer */
@@ -224,19 +74,6 @@ a {
   background: var(--color-secondary);
   color: var(--color-white);
   text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-}
-
-.footer-links {
-  margin-top: 0.5rem;
-}
-
-.footer-links a {
-  color: var(--color-white);
-}
-
-/* Standalone pages (privacy policy, terms, etc.) */
-.page {
-  background: var(--color-bg);
+  padding: 1rem;
+  font-size: 0.85rem;
 }
