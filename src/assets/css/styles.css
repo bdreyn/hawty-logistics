@@ -195,6 +195,14 @@ a {
   gap: 0.4rem;
 }
 
+/* Honeypot: off-canvas rather than display:none, since some bots skip
+   fields hidden that way but still fill this out. Real users never see it. */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
 .contact-form label {
   font-weight: 600;
   margin-top: 0.6rem;
