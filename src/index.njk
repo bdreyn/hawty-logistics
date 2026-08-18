@@ -4,37 +4,34 @@ layout: base.njk
 <section class="coming-soon">
   <div class="coming-soon-inner">
     <img src="{{ site.logo }}" alt="{{ site.companyName }} logo" class="coming-soon-logo" onerror="this.style.display='none'">
-    <h1>{{ site.companyName }}</h1>
     <p class="tagline">{{ site.tagline }}</p>
     <p class="notice">Our full site is coming soon.</p>
-    {% if site.email or site.phone %}
-    <p class="contact-line">
-      {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
-      {% if site.email and site.phone %} &middot; {% endif %}
-      {% if site.phone %}{{ site.phone }}{% endif %}
-    </p>
+    {% if site.phone %}
+    <p class="contact-line">{{ site.phone }}</p>
     {% endif %}
 
-    <form id="contact-form" class="contact-form">
-      <div class="hp-field" aria-hidden="true">
-        <label for="_gotcha">Leave this field blank</label>
-        <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
-      </div>
+    <div class="contact-card">
+      <form id="contact-form" class="contact-form">
+        <div class="hp-field" aria-hidden="true">
+          <label for="_gotcha">Leave this field blank</label>
+          <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
 
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit" class="btn btn-primary">Send Message</button>
-      <p id="contact-form-status" class="contact-form-status" role="status" aria-live="polite"></p>
-    </form>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="contact-form-status" class="contact-form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
   </div>
 </section>
