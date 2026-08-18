@@ -2,6 +2,9 @@ backend:
   name: github
   repo: bdreyn/hawty-logistics
   branch: develop
+  base_url: https://sveltia-cms-auth.bdreyn.workers.dev
+
+site_url: https://hawty-logistics-preview.pages.dev
 
 media_folder: src/assets/img
 public_folder: /assets/img
