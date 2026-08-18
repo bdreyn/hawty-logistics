@@ -1,8 +1,12 @@
 <header class="navbar">
   <div class="navbar-inner">
     <a href="/" class="navbar-brand">
-      <img src="{{ site.logo }}" alt="{{ site.companyName }} logo" class="navbar-logo" onerror="this.style.display='none'">
+      {% if site.logo %}
+      <img src="{{ site.logo }}" alt="{{ site.companyName }} logo" class="navbar-logo" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('sr-only');">
+      <span class="navbar-name sr-only">{{ site.companyName }}</span>
+      {% else %}
       <span class="navbar-name">{{ site.companyName }}</span>
+      {% endif %}
     </a>
     <nav class="navbar-links">
       {% for section in homepage.sections %}
