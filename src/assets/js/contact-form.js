@@ -1,7 +1,7 @@
 // Posts the contact form to Formspree (https://formspree.io). Create a
 // form at formspree.io, then replace this with your form's endpoint
 // (Settings -> Integration -> "Your form's endpoint" URL).
-const CONTACT_FORM_ENDPOINT = "REPLACE_WITH_FORMSPREE_ENDPOINT";
+const CONTACT_FORM_ENDPOINT = "https://formspree.io/f/xljropok";
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
