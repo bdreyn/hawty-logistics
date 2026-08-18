@@ -69,6 +69,76 @@ a {
   color: var(--color-white);
 }
 
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: #145d73;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 2rem;
+  gap: 0.4rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-top: 0.6rem;
+  color: var(--color-white);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccd6db;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.contact-form button {
+  margin-top: 1.25rem;
+  align-self: flex-start;
+}
+
+.contact-form-status {
+  min-height: 1.2em;
+  font-weight: 600;
+}
+
+.contact-form-status.success {
+  color: #7fe3a3;
+}
+
+.contact-form-status.error {
+  color: #ff9d94;
+}
+
+/* Honeypot: off-canvas rather than display:none, since some bots skip
+   fields hidden that way but still fill absolutely-positioned ones. */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
 /* Footer */
 .site-footer {
   background: var(--color-secondary);
